@@ -20,6 +20,12 @@ butInstall.addEventListener("click", async () => {
   promptEvent.prompt();
   // Log the user's choice to the console for debugging purposes
   const result = await promptEvent.userChoice;
+  // If the user accepted the installation, add the PWA to the home screen
+  if (result.outcome === "accepted") {
+    console.log("PWA installed successfully!");
+  } else {
+    console.log("Installation was dismissed by the user.");
+  }
 
   // Hide the prompt if the user dismisses it
   window.deferredPrompt = null;
@@ -31,5 +37,6 @@ butInstall.addEventListener("click", async () => {
 // TODO: Add an handler for the `appinstalled` event
 window.addEventListener("appinstalled", (event) => {
   console.log("The PWA has been installed successfully!");
+  window.deferredPrompt = event; // Clear the deferred prompt reference
   window.deferredPrompt = null; // Clear the deferred prompt reference
 });

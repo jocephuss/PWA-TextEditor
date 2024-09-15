@@ -1,5 +1,5 @@
 import { openDB } from "idb";
-
+// The function below initializes the IndexedDB database
 const initdb = async () =>
   openDB("jate", 1, {
     upgrade(db) {
@@ -20,7 +20,7 @@ export const putDb = async (content) => {
   const store = tx.objectStore("jate"); // Get the jate object store
   const request = store.add({ content }); // Add the content to the database transaction
   const result = await request; // Wait for the transaction to complete
-  console.log("Content added:", result);
+  console.log("Content added to the database:", result);
 };
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
