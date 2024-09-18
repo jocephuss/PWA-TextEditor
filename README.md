@@ -23,7 +23,7 @@ Used for creating and testing code.
 
 ## License
 
-This project is licensed under the MIT license. See the [MIT License]([MIT License](https://opensource.org/licenses/MIT)) file for details.
+This project is licensed under the MIT license. See the ([MIT License](https://opensource.org/licenses/MIT)) file for details.
 
 
 ## Contributing
