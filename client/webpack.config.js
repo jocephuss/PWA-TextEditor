@@ -38,6 +38,7 @@ module.exports = () => {
         description:
           "A simple text editor for creating and editing documents offline!.",
         start_url: "./",
+        publicPath: "/",
         icons: [
           {
             src: path.resolve(__dirname, "src/images/logo.png"),
